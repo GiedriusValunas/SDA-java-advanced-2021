@@ -9,22 +9,21 @@ public class Colorize {
             System.out.println(possibleColor.name());
         }
 
-        Color color = Color.BLUE;
+        for (Color color : Color.values()) {
 
-        switch (color) {
-            case BLUE: {
-                System.out.println(color.getCode() + "color is blue");
-                break;
-            }
-            case RED: {
-                System.out.println(color.getCode() + "color is red");
-                break;
-            }
-            case GREEN: {
-                System.out.println(color.getCode() + "color is green");
-                break;
+            switch (color) {
+
+                case BLUE:
+                case YELLOW:
+                case RED:
+                case GREEN:
+                    System.out.println(color.getCode() + "color is " +
+                            color.toString().toLowerCase());
+                    break;
+
+                case RESET:
+                    break;
             }
         }
-
     }
 }

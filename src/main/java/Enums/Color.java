@@ -2,11 +2,14 @@ package Enums;
 
 public enum Color {
 
-    //ANSI colors
+    // ANSI colors
     BLUE("\u001B[34m"),
-    RED("\u001B[31m"),
+    YELLOW("\u001B[33m"),
     GREEN("\u001B[32m"),
-    RESET("\u001B[0m");
+    RED("\u001B[31m"),
+    RESET("\u001B[0m"),
+
+    BLACK( "0" );
 
     private String code;
 
@@ -17,4 +20,5 @@ public enum Color {
     public String getCode() {
         return code;
     }
+
 }

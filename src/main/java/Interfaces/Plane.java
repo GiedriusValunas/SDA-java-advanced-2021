@@ -28,5 +28,12 @@ public class Plane {
 
         coloredShape.colorize("blue");
 
+        // Call to retrieve a static counter Circle::getCount
+        System.out.println( "We have created " + shape1.getCount() + " "
+                + shape1.print() +"(s)" );
+
+        // Call to retrieve a static counter Rectangle::getCount
+        System.out.println( "We have created " + shape2.getCount() + " "
+                + shape2.print() +"(s)" );
     }
 }
