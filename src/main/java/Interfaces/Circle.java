@@ -21,6 +21,7 @@ public class Circle implements Shape, ColoredShape {
         return 2 * radius * 3.1415;
     }
 
+    @Override
     public int getCount() {
         return Circle.countShapes;
     }

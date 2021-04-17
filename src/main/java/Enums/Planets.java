@@ -8,7 +8,7 @@ enum Planets {
     JUPITER("huge"),
     PLUTO("dwarf");
 
-    private String size;
+    private final String size;
     private String name;
 
     Planets(String size) {

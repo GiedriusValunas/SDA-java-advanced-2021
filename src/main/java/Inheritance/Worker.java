@@ -25,4 +25,8 @@ public class Worker extends Human {
     public void work() {
         System.out.println("worker works");
     }
+
+    public String getName() {
+        return name;
+    }
 }
