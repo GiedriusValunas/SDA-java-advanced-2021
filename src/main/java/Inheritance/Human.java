@@ -3,8 +3,7 @@ package Inheritance;
 public class Human {
 
     // invisible to child class
-    private int legs;
-
+    protected int legs;
     public int hands;
 
     public Human() {

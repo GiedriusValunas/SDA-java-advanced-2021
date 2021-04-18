@@ -7,7 +7,7 @@ public class OfficeWorker extends Worker {
     }
 
     @Override
-    public void work() {
+    public void work() throws Exception {
         System.out.println("Does " + super.getName() + " work ? no, he is in the meeting.");
     }
 

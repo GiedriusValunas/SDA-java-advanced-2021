@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class RegistrationOffice {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Human human = new Human();
 
@@ -69,10 +69,11 @@ public class RegistrationOffice {
         for ( int i =0; i < humans.length; i++ ) {
 
             Human man = new OfficeWorker( givenJava8RandomAlphanumeric(), "000000000" + i );
+            humans[ i ] = man;
+            System.out.println("In loop: " + man.toString() );
 
             man.move();
-            System.out.println("In loop: " + man.toString());
-
+            ((OfficeWorker) man).work();
         }
     }
 
