@@ -36,13 +36,6 @@ public class MessageGenerator {
 
         errorDisplay.displayError();
 
-//        ErrorDisplayAdvanced errorDisplayAdvanced = new ErrorDisplayAdvanced() {
-//            @Override
-//            public void displayMessage(ErrorCodes codes) {
-//
-//            }
-//        };
-
         ErrorDisplayAdvanced errorDisplayAdvanced = (errorCode) -> {
             if(errorCode.equals(ErrorCodes.NOTFOUND)) {
                 System.out.println("no data found");
@@ -50,6 +43,20 @@ public class MessageGenerator {
                 System.out.println("please try again");
             }
         };
+
+        ErrorDisplayAdvanced errorDisplayAdvancedAsOverride = new ErrorDisplayAdvanced() {
+            @Override
+            public void displayMessage(ErrorCodes errorCode) {
+
+                if (errorCode.equals(ErrorCodes.NOTFOUND)) {
+                    System.out.println("no data found");
+                } else if (errorCode.equals(ErrorCodes.INVALIDINPUT)) {
+                    System.out.println("please try again");
+                }
+            }
+        };
+
+        errorDisplayAdvancedAsOverride.displayMessage( ErrorCodes.INVALIDINPUT );
 
         ErrorCodes error = ErrorCodes.NOTFOUND;
         errorDisplayAdvanced.displayMessage(error);

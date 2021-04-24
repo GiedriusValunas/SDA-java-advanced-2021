@@ -15,10 +15,11 @@ public class FunctionExample {
 
         System.out.println(functionInterface.apply("Jonas"));
 
-        // return omited
-        Function<Integer, String> functionInterface2 = integer -> integer + " magoes";
+        // return omitted
+        Function<Integer, String> functionInterface2 = integer -> integer + " mangoes";
 
-        System.out.println(functionInterface2.apply(5));
+        System.out.println(functionInterface2.apply(
+                functionInterface.apply("Jonas") ) );
 
         Function<Integer, String> functionInterface3 = integer -> {
             if (integer == 1) {
@@ -27,6 +28,8 @@ public class FunctionExample {
                 return integer + " mangoes";
             }
         };
+
+        System.out.println(functionInterface3.apply(1));
 
         System.out.println(functionInterface3.apply(7));
 
