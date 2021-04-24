@@ -107,16 +107,5 @@ public class ListWithLambda {
                 toSquareUnaryOpAsOverride.apply( toSquareUnaryOpAsOverride.apply( 5.0d ) )
         );
 
-        int n = 15;
-        //calculate Fibonacci at given place
-
-        Long nth =
-        Stream.iterate( new long[] {1, 1}, f -> new long[] { f[1], f[0] + f[1] })
-                .limit(n)
-                .reduce((a, b) -> b)
-                .get()[0];
-
-        printWithPrefixAsOverride.accept(Double.valueOf( nth ));
-
     }
 }
