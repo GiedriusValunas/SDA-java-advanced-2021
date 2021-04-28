@@ -10,7 +10,7 @@ public class Reader {
 
         try {
             //FileReader reader = new FileReader("./files/results.txt");
-            FileReader reader = new FileReader( "/home/adminas/workspace/java-advanced-2021/files/results.txt");
+            FileReader reader = new FileReader( "./files/results.txt");
 
             int data;
             while ((data = reader.read()) != -1) {

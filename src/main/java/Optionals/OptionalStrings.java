@@ -66,13 +66,6 @@ public class OptionalStrings
         System.out.println( Arrays.stream( allOptionals ).count() + " elements total" );
         System.out.println( asList.stream().filter( Optional::isPresent ).count() + " present elements" );
 
-/*        Function< Optional<String>, Integer> functionForLength = new Function< Optional<String>, Integer>() {
-            @Override
-            public Integer apply( Optional<String> s) {
-                return s.get().length();
-            }
-        };*/
-
         List<Optional> asPresentOnly = asList.stream()
                 .filter( Optional::isPresent )
                 .collect(Collectors.toList());

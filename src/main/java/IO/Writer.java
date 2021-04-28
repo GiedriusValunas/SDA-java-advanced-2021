@@ -7,7 +7,7 @@ public class Writer {
 
     public static void main(String[] args) {
 
-        try (FileWriter fileWriter = new FileWriter("/home/adminas/workspace/java-advanced-2021/files/output.txt")) {
+        try (FileWriter fileWriter = new FileWriter("./files/output.txt")) {
 
             String text = "File content to write";
 
