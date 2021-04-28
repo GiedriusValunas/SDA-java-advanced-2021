@@ -6,7 +6,7 @@ public class AdvancedReader {
 
     public static void main(String[] args) { // throws Exception {
 
-        File file = new File("C:\\files\\text.txt");
+        File file = new File("./files/results.txt");
 
         try {
             FileReader fileReader = new FileReader(file);

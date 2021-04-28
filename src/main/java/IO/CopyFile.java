@@ -4,11 +4,11 @@ public class CopyFile {
 
     public static void main(String[] args) {
 
-
-        Copier copier = new Copier("C:\\files\\image.png");
+        Copier copier = new Copier("/home/adminas/workspace/java-advanced-2021/files/results.txt");  //source
 
         try {
-            copier.copy("C:\\files\\image1.png");
+            copier.copy("/home/adminas/workspace/java-advanced-2021/files/copied.txt");   //destination
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

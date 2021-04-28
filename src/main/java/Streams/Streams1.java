@@ -44,7 +44,5 @@ public class Streams1 {
 
         System.out.println("=========");
         System.out.println("Sum " + sumOfPrices);
-
-
     }
 }
