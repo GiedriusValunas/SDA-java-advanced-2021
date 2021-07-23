@@ -3,9 +3,12 @@ package Interfaces;
 public class Circle implements Shape, ColoredShape {
 
     double radius;
+    protected static int countShapes = 0;
 
     public Circle(double radius) {
         this.radius = radius;
+
+        Circle.countShapes++;
     }
 
     @Override
@@ -16,6 +19,11 @@ public class Circle implements Shape, ColoredShape {
     @Override
     public double getPerimeter() {
         return 2 * radius * 3.1415;
+    }
+
+    @Override
+    public int getCount() {
+        return Circle.countShapes;
     }
 
     @Override

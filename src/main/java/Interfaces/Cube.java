@@ -3,9 +3,12 @@ package Interfaces;
 public class Cube implements Shape3D {
 
     private double width;
+    protected static int countShapes = 0;
 
     public Cube(double width) {
         this.width = width;
+
+        Cube.countShapes++;
     }
 
     @Override
@@ -21,5 +24,10 @@ public class Cube implements Shape3D {
     @Override
     public double getPerimeter() {
         return 6 * width * width;
+    }
+
+    @Override
+    public int getCount() {
+        return Cube.countShapes;
     }
 }
