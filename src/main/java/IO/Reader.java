@@ -9,7 +9,8 @@ public class Reader {
     public static void main(String[] args) {
 
         try {
-            FileReader reader = new FileReader("C:\\files\\text.txt");
+            //FileReader reader = new FileReader("./files/results.txt");
+            FileReader reader = new FileReader( "./files/results.txt");
 
             int data;
             while ((data = reader.read()) != -1) {
@@ -23,7 +24,6 @@ public class Reader {
         } catch (IOException e) {
             System.out.println("failed to read");
         }
-
 
     }
 }

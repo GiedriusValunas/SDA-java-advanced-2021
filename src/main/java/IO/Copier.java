@@ -24,6 +24,7 @@ public class Copier {
             outputStream.write(data);
         }
 
+        System.out.println( ((FileOutputStream) outputStream).toString() );
         outputStream.flush();
 
         inputStream.close();

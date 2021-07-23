@@ -8,7 +8,7 @@ public class AdvancedWriter {
 
     public static void main(String[] args) {
 
-        try (FileWriter fileWriter = new FileWriter("C:\\files\\text.txt")) {
+        try (FileWriter fileWriter = new FileWriter("./files/buffered.txt")) {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             bufferedWriter.write("This text is for buffered writing ");
@@ -19,6 +19,7 @@ public class AdvancedWriter {
             bufferedWriter.close();
         } catch (IOException e) {
             System.out.println("could not write");
+            e.printStackTrace();
         }
     }
 }
